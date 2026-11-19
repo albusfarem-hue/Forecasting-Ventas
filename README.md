@@ -97,25 +97,32 @@ This approach transforms the machine learning model into a decision-support tool
 - Seaborn  
 
 ## Repository Structure
-```markdown
-forecasting-ventas
-│
-├── data
-│   └── processed
-│
-├── models
-│   └── modelo_final.pkl
-│
-├── notebooks
-│   ├── eda.ipynb
-│   └── entrenamiento.ipynb
-│
-├── src
-│   └── app.py
-│
+
+```text
+project-root/
+├── .github/
+├── .streamlit/
+├── .vscode/
+├── data/
+│   └── processed/
+│       ├── df.csv
+│       └── inferencia_df_transformado.csv
+├── models/
+│   ├── modelo_final.joblib
+│   ├── modelo_final.pkl
+│   └── modelo_metadata.json
+├── notebooks/
+│   ├── entrenamiento.ipynb
+│   └── forecasting.ipynb
+├── .gitignore
+├── app.py
+├── app-preview.png
+├── regenerar_modelo.py
 ├── requirements.txt
+├── runtime.txt
 └── README.md
 ```
+
 ## Project Architecture
 
 The project follows a typical applied machine learning workflow:
@@ -130,10 +137,11 @@ This separation allows experimentation, model training, and deployment to remain
 
 ## Future Improvements
 
-- Incorporate advanced time-series models
-- Add scenario comparison dashboards
-- Deploy the application in the cloud
-- Integrate real-time data pipelines
+- Incorporate advanced time-series forecasting models.
+- Add comparative dashboards for multiple business scenarios.
+- Improve automated testing and deployment monitoring.
+- Integrate real-time data pipelines.
+- Expand technical documentation and usage examples.
 
 ## Acknowledgments
 
